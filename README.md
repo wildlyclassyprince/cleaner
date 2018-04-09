@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Cleaner
 
-You can use the [editor on GitHub](https://github.com/wildlyclassyprince/cleaner/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A Python module for simplified routine data cleaning.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Libraries
 
-### Markdown
+The following libraries are required by the module:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**External:**
+>- pandas
+>- numpy
 
-```markdown
-Syntax highlighted code block
+To import the module:
 
-# Header 1
-## Header 2
-### Header 3
+`import cleaner2 as cl`
 
-- Bulleted
-- List
+1. If you want to display the unique value counts for each field:
 
-1. Numbered
-2. List
+`cl.unique_value_counts(dataframe=data)`
 
-**Bold** and _Italic_ and `Code` text
+2. If you want to change the character case for columns containing string data (makes it easier for data to be uniform):
 
-[Link](url) and ![Image](src)
-```
+`cl.word_case(dataframe=data, font='Title)`
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+   Available character cases are:
+   >- 'Title' : sentence character case
+   >- 'Upper' : upper character case
+   >- 'Lower' : lower character case
 
-### Jekyll Themes
+_NB: The default character case is 'Title'._
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wildlyclassyprince/cleaner/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+3. To remove specific columns from the dataset:
 
-### Support or Contact
+`cl.remove_columns(fields=columns_to_remove, dataframe=data)`
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+4. To remove redundant columns, i.e., columns with single entries, no entries, or with more than 50% of the data missing:
+
+`cl.remove_columns(dataframe=data)`
+
+**Testing**
+>- Testing for `cleaner2.py` has been done in Python 3.X. 
+>- Testing scripts for `cleaner2.py` are available, however, they are incomplete.
+>- `cleaner.py` has NOT been tested.
