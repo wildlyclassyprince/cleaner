@@ -14,11 +14,11 @@ To import the module:
 
 `import cleaner2 as cl`
 
-1. If you want to display the unique value counts for each field:
+1. To display the number of unique value counts for each field:
 
 `cl.unique_value_counts(dataframe=data)`
 
-2. If you want to change the character case for columns containing string data (makes it easier for data to be uniform):
+2. To change the character case for columns with string data (imposing uniformity on the data):
 
 `cl.word_case(dataframe=data, font='Title)`
 
@@ -29,7 +29,7 @@ To import the module:
 
 _NB: The default character case is 'Title'._
 
-3. To remove specific columns from the dataset:
+3. To remove specific columns from the dataset (deliberate clean-up of redundant data):
 
 `cl.remove_columns(fields=columns_to_remove, dataframe=data)`
 
