@@ -7,7 +7,6 @@ import pandas as pd
 # Information
 __author__ = "wildlyclassyprince"
 __version__ = "$Revision: 0.1.1 $"
-__date__ = "$Date: 2018/04/08 17:27:57 $"
 __licence__ = "GNU"
 
 # Display values counts for each column.
@@ -21,7 +20,7 @@ class display:
 		self.shape = dataframe.shape
 		self.head = dataframe.head()
 		self.columns = dataframe.columns
-		self.fields = []
+		self.fields = list()
 
 	def unique_value_counts(self):
 		'''
@@ -52,11 +51,11 @@ class display:
 			while True:
 				value = _names.__next__()
 				if (self.dataframe[value].dtype == 'O'):
-					if font == 'Title':
+					if (font in ['Title', 'title']):
 						self.dataframe[value] = self.dataframe[value].str.title()
-					elif font == 'Lower':
+					elif (font in ['Lower', 'lower']):
 						self.dataframe[value] = self.dataframe[value].str.lower()
-					elif font == 'Upper':
+					elif (font in ['Upper', 'upper']):
 						self.dataframe[value] = self.dataframe[value].str.upper()
 					else:
 						pass
