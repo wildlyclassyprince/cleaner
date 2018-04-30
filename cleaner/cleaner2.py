@@ -7,7 +7,6 @@ import pandas as pd
 # Information
 __author__ = "wildlyclassyprince"
 __version__ = "$Revision: 0.1.1 $"
-__date__ = "$Date: 2018/04/08 17:27:57 $"
 __licence__ = "GNU"
 
 # Value counts
@@ -40,11 +39,11 @@ def word_case(dataframe, font='Title'):
 		while True:
 			column = _names.__next__()
 			if (dataframe[column].dtype == 'O'):
-				if (font == 'Title'):
+				if (font in ['Title', 'title']):
 					dataframe[column] = dataframe[column].str.title()
-				elif (font == 'Lower'):
+				elif (font in ['Lower', 'lower']):
 					dataframe[column] = dataframe[column].str.lower()
-				elif (font == 'Upper'):
+				elif (font in ['Upper', 'upper']):
 					dataframe[column] = dataframe[column].str.upper()
 				else:
 					pass
@@ -65,7 +64,7 @@ def drop_fields(fields, dataframe):
 		while True:
 			del dataframe[_drop.__next__()]
 	except StopIteration:
-		print('\nDone!\nNew dataframe shape: {}\n\nThis is what the dataframe looks like now:\n'.format(dataframe.shape))
+		print('\nDone!\nNew dataframe shape: {}\n\nThe new dataframe:\n'.format(dataframe.shape))
 	except KeyError:
 		print('Column does not exist.')
 		pass
