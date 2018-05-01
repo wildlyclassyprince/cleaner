@@ -39,11 +39,11 @@ def word_case(dataframe, font='Title'):
 		while True:
 			column = _names.__next__()
 			if (dataframe[column].dtype == 'O'):
-				if (font in ['Title', 'title']):
+				if (font.lower() == 'title'):
 					dataframe[column] = dataframe[column].str.title()
-				elif (font in ['Lower', 'lower']):
+				elif (font.lower() == 'lower'):
 					dataframe[column] = dataframe[column].str.lower()
-				elif (font in ['Upper', 'upper']):
+				elif (font.lower() == 'upper'):
 					dataframe[column] = dataframe[column].str.upper()
 				else:
 					pass
