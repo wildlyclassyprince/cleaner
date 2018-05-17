@@ -9,10 +9,10 @@ __author__ = "wildlyclassyprince"
 __version__ = "$Revision: 0.1.1 $"
 __licence__ = "GNU"
 
-# Value counts
-def unique_value_counts(dataframe):
+# Unique values
+def unique_values(dataframe):
 	'''
-	Prints the unique value counts for each column.
+	Prints the unique values for each column.
 	'''
 	_cols = (x for x in dataframe.columns)
 	try:
@@ -26,6 +26,23 @@ def unique_value_counts(dataframe):
 				  '\n')
 	except StopIteration:
 		print('Done.')
+	except KeyError:
+		print('Nothing to do.\n')
+		
+# Unique value counts
+def unique_value_counts(dataframe):
+	'''
+	Prints the unique value counts for each column.
+	'''
+	_cols = (x for x in dataframe.columns)
+	try:
+		while True:
+			field = _cols.__next__()
+			print('='*50, 
+				  '\nColumn: "{}"\nCount:\t{}\n'.format(field, len(dataframe[field].unique())),
+				  '='*50, '\n')
+	except StopIteration:
+		print('Done.\n')
 	except KeyError:
 		print('Nothing to do.\n')
 
