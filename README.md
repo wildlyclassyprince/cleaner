@@ -26,7 +26,7 @@ To import the module:
 
 3. To change the character case for columns with string data (imposing uniformity on the data):
 
-`clr.word_case(dataframe=data, font='Title)`
+`clr.word_case(dataframe=data, font='Title')`
 
    Available character cases are:
    >- 'Sentence'  : capitalize the first word only
