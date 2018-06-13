@@ -12,34 +12,39 @@ The following libraries are required by the module:
 
 To import the module:
 
-`import cleaner2 as cl`
+`import cleaner2 as clr`
 
 1. To display the number of unique values for each field:
 
-`cl.unique_values(dataframe=data)`
+`clr.unique_values(dataframe=data)`
 
 2. To display the number of unique value counts for each field:
 
-`cl.unique_value_counts(dataframe=data`
+`clr.unique_value_counts(dataframe=data`
 
 3. To change the character case for columns with string data (imposing uniformity on the data):
 
-`cl.word_case(dataframe=data, font='Title)`
+`clr.word_case(dataframe=data, font='Title)`
 
    Available character cases are:
-   >- 'Title' : sentence character case
-   >- 'Upper' : upper character case
-   >- 'Lower' : lower character case
+   >- 'Sentence'  : capitalize the first word only
+   >- 'Title'     : capitalize each word
+   >- 'Upper'     : all letters in upper-case
+   >- 'Lower'     : all letters in lower-case
 
 _NB: The default character case is 'Title'._
 
 4. To remove specific columns from the dataset (deliberate clean-up of redundant data):
 
-`cl.remove_columns(fields=columns_to_remove, dataframe=data)`
+`clr.remove_columns(fields=columns_to_remove, dataframe=data)`
 
 5. To remove redundant columns, i.e., columns with single entries, no entries, or with more than 50% of the data missing:
 
-`cl.remove_columns(dataframe=data)`
+`clr.remove_columns(dataframe=data)`
+
+6. To plot frequencies:
+
+`clr.frequency_plot(dataframe=data, x=x_variable, title=title_of_plot, xlabel=x_label, hue=None)`
 
 **Testing**
 >- Testing for `cleaner2.py` has been done in Python 3.X. 
