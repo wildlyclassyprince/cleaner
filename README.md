@@ -9,6 +9,8 @@ The following libraries are required by the module:
 **External:**
 >- pandas
 >- numpy
+>- matplotlib
+>- seaborn
 
 To import the module:
 
