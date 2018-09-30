@@ -48,11 +48,11 @@ _NB: The default character case is 'Title'._
 
 `clr.frequency_plot(dataframe=data, x=x_variable, title=title_of_plot, xlabel=x_label, hue=None)`
 
-*To-Do:*
+### To-Do:
 
 This is a to-do list for both scripts, i.e., `cleaner.py` and `cleaner2.py`.
 
-[ ] Rewrite `cleaner.py` and make it Pythonic
-[ ] Rewrite `cleaner2.py` with funcion wrappers
-[ ] Build tests
-[ ] Verify tests and validate functionality
+- [ ] Rewrite `cleaner.py` and make it Pythonic
+- [ ] Rewrite `cleaner2.py` with funcion wrappers
+- [ ] Build tests
+- [ ] Verify tests and validate functionality
