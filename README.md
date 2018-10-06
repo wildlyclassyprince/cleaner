@@ -51,6 +51,6 @@ _NB: The default character case is 'Title'._
 
 ### To-Do:
 
-- [ x ] Rewrite `cleaner.py` and make it Pythonic
-- [ x ] Build tests
-- [ x ] Verify tests and validate functionality
+- [x] Rewrite `cleaner.py` and make it Pythonic
+- [x] Build tests
+- [x] Verify tests and validate functionality
