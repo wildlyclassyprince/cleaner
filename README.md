@@ -11,10 +11,11 @@ The following libraries are required by the module:
 >- numpy
 >- matplotlib
 >- seaborn
+>- setuptools
 
 To import the module:
 
-`import cleaner2 as clr`
+`import cleaner as clr`
 
 1. To display the number of unique values for each field:
 
@@ -50,9 +51,6 @@ _NB: The default character case is 'Title'._
 
 ### To-Do:
 
-This is a to-do list for both scripts, i.e., `cleaner.py` and `cleaner2.py`.
-
-- [ ] Rewrite `cleaner.py` and make it Pythonic
-- [ ] Rewrite `cleaner2.py` with funcion wrappers
-- [ ] Build tests
-- [ ] Verify tests and validate functionality
+- [ x ] Rewrite `cleaner.py` and make it Pythonic
+- [ x ] Build tests
+- [ x ] Verify tests and validate functionality
