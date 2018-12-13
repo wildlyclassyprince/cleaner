@@ -9,7 +9,6 @@ import seaborn as sns
 
 # Information
 __author__ = "wildlyclassyprince"
-__version__ = "$Revision: 0.1.1 $"
 __licence__ = "GNU"
 
 # Value counts
